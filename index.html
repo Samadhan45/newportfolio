@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>My Portfolio - Samadhan Kadam</title>  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5KwNYHTQclBQdsasKzssBOC3yfV+BLRzPXoRzFA/DqfKBYLK7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  <button id="modeToggle" style="position:fixed; top:20px; right:20px; z-index:2000; padding:0.5rem 1rem; background:var(--primary-color); color:white; border:none; border-radius:8px; cursor:pointer; font-size:1.2rem;">
+  <span id="themeIcon">🌙</span>
+</button>
+
+<script>
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById("modeToggle");
+  const icon = document.getElementById("themeIcon");
+
+  toggleBtn.addEventListener("click", () => {
+    if (root.classList.contains("dark-mode")) {
+      root.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+      icon.textContent = "🌙";
+    } else {
+      root.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+      icon.textContent = "☀️";
+    }
+  });
+
+  // Load theme from local storage
+  if (localStorage.getItem("theme") === "dark") {
+    root.classList.add("dark-mode");
+    icon.textContent = "☀️";
+  }
+</script>
+
+
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Samadhan Kadam.</a>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="navmenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-text">
+      <h2>Hello, I'm Samadhan <i class="ph-bold ph-hand-waving"></i></h2>
+      <h3>Frontend Developer</h3>
+      <p>
+        I'm Samadhan Kadam, a Full Stack Developer passionate about building modern, scalable, and beautiful web applications. Skilled in React.js, Next.js, and Java, I specialize in crafting responsive UIs and robust backend systems that deliver seamless user experiences. Whether it’s a portfolio site or a full-fledged finance tracker, I bring clean code, creative design, and real-world problem-solving to every project I build.
+      </p>
+      <div class="home-btn">
+        <a href="#contact" class="btn">Contact Info</a>
+        <a href="https://drive.google.com/file/d/116TwrqjFDnRVEDE_u4GjqncRB5RIW4GC/view" target="_blank" class="btn">Download CV <i class="ph ph-read-cv-logo"></i></a>
+      </div>
+    </div>
+    <div class="home-png">
+      <img src="images/image.png" alt="Home Image" />
+    </div>
+  </section>
+  <span class="label">Follow Me</span>
+  <div class="socials-icons">
+    <a href="https://www.linkedin.com/in/samadhan1" target="_blank"><i class="ph-bold ph-linkedin-logo"></i></a>
+    <a href="https://www.instagram.com/samadhan_kadam_31" target="_blank"><i class="ph-bold ph-instagram-logo"></i></a>
+    <a href="https://github.com/Samadhan45" target="_blank"><i class="ph-bold ph-github-logo"></i></a>
+    <a href="https://discordapp.com/users/930142611216425032" target="_blank"><i class="ph-bold ph-discord-logo"></i></a>
+    <a href="https://www.reddit.com/u/samadhan_kadam/s/Wy6m0tTCgg" target="_blank"><i class="ph-bold ph-reddit-logo"></i></a>
+    <a href="https://x.com/Samadhan__Kadam?s=09https://x.com/Samadhan__Kadam?s=09" target="_blank"><i class="ph-bold ph-x-logo"></i></a>
+    <a href="https://wa.me/918010792529?text=Hello"_blank" target="_blank"><i class="ph-bold ph-whatsapp-logo"></i></a>
+
+  </div>
+  <a href="#skills" class="scroll-btn">Scroll Down <i class="ph-bold ph-arrow-bend-right-down"></i></a>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="section-header">
+      <h2>My Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skill-card">
+        <i class="ph-bold ph-code"></i>
+        <h3>Programming Languages</h3>
+        <p>
+        Java, C++, Python </p>
+      </div>
+      <div class="skill-card">
+        <i class="ph-bold ph-device-mobile"></i>
+        <h3>Frontend Development</h3>
+        <p>React.js, Html, Css, JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <i class="ph-bold ph-database"></i>
+        <h3>Backend Development</h3>
+        <p>Node.js, Django, Next.js</p>
+      </div>
+      <div class="skill-card">
+        <i class="ph-bold ph-git-branch"></i>
+        <h3>Version Control</h3>
+        <p>Git, GitHub, GitLab</p>
+      </div>
+      <div class="skill-card">
+        <i class="ph-bold ph-wrench"></i>
+        <h3>Tools & Technologies</h3>
+        <p>
+          VS Code, Figma, Notion, Slack, Zoom, Eclipse
+        </p>
+      </div>
+      <div class="skill-card">
+        <i class="ph-bold ph-users"></i>
+        <h3>Others</h3>
+        <p>
+          Problem Solving, Critical Thinking, Time Management, Adaptability, Teamwork, Leadership
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="images/image.png" alt="About Me Image" />
+      </div>
+      <div class="about-content">
+        <h3>Frontend Developer & UI Designer</h3>
+        <p>
+          I'm a passionate frontend developer based in Nepal with a strong
+          focus on creating responsive and user-friendly web applications.
+          With a keen eye for design and attention to detail, I strive to
+          build seamless digital experiences.
+        </p>
+        <p>
+          My journey in web development began 3 years ago, and since then,
+          I've worked on various projects that have helped me refine my skills
+          and stay updated with the latest technologies and trends in the
+          industry.
+        </p>
+        <div class="about-info">
+          <div class="info-item">
+            <span>Name:</span>
+            <p>Samadhan Kadam</p>
+          </div>
+          <div class="info-item">
+            <span>Email:</span>
+            <p>samadhankadam002@gmail.com</p>
+          </div>
+          <div class="info-item">
+            <span>Location:</span>
+            <p>Pune, India</p>
+          </div>
+          <div class="info-item">
+            <span>Freelance:</span>
+            <p>Available</p>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/116TwrqjFDnRVEDE_u4GjqncRB5RIW4GC/view" target="_blank" class="btn">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="section-header">
+      <h2>My Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/project1.png" alt="Project 1" />
+        </div>
+        <div class="project-content">
+          <h3>HisabKitab expense tracker</h3>
+          <p>
+            A full-stack expense management app built with Next.js, Tailwind CSS, and Clerk. It handles user authentication, displays monthly transactions with interactive charts using Chart.js, and delivers a responsive, modern user interface.
+          </p>
+          <div class="project-tags">
+            <span>Next.js</span>
+            <span>Tailwind CSS</span>
+            <span>Clerk</span>
+            <span>React.js</span>
+          </div>
+          <div class="project-links">
+            <a href="https://hisab-kitab-lilac.vercel.app/" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/Samadhan45/HisabKitab" target="_blank" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/project2.png" alt="Project 2" />
+        </div>
+        <div class="project-content">
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A personal portfolio website built using React.js, HTML, and CSS. It showcases my skills, projects, and contact information with smooth animations, responsive design, and real-time GitHub links.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Samadhan45/portfolio" target="_blank" class="btn">Live Demo</a>
+            <a href="https://samadhan45.github.io/portfolio/" target="_blank" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="project-card">
+        <div class="project-img">
+          <img src="images/project3.png" alt="Project 3" />
+        </div>
+        <div class="project-content">
+          <h3>Responsive Pizza Website</h3>
+          <p>
+            A responsive pizza website showcasing my projects and skills,
+            built with HTML, CSS, and JavaScript with a focus on responsive
+            design and smooth animations.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn">Live Demo</a>
+            <a href="#" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/project4.png" alt="Project 4" />
+        </div>
+        <div class="project-content">
+          <h3>Responsive Burger Website</h3>
+
+          <p>
+            A responsive burger website showcasing my projects and skills,
+            built with HTML, CSS, and JavaScript with a focus on responsive
+            design and smooth animations.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn">Live Demo</a>
+            <a href="#" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <h2>Contact Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p>
+          Feel free to reach out to me for any questions, project inquiries,
+          or just to say hello!
+        </p>
+        <div class="info-box">
+          <i class="ph-bold ph-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>samadhankadam002@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <i class="ph-bold ph-map-pin"></i>
+          <div>
+            <h4>Location</h4>
+            <p>Pune, India</p>
+          </div>
+        </div>
+        <div class="info-box">
+          <i class="ph-bold ph-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+91 8010792529</p>
+          </div>
+        </div>
+        <!-- <div class="contact-social">
+          <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
+          <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
+          <a href="#"><i class="ph-bold ph-github-logo"></i></a>
+          <a href=""><i class="ph-bold ph-x-logo"></i></a>
+        </div> -->
+      </div>
+      <div class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="c8bd75d4-7eb0-44bf-8961-a48588392a42">
+          <div class="input-row">
+            <div class="input-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Enter your name" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" placeholder="Enter your email" required />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Enter subject" required />
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="btn">
+            Send Message <i class="ph-bold ph-paper-plane-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <a href="#" class="logo">Samadhan Kadam.</a>
+          <p>
+            Creating beautiful digital experiences with clean and efficient
+            code.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">Mobile Development</a></li>
+            <li><a href="#">Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to receive updates and news</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Samadhan Kadam. All Rights Reserved.</p>
+        <!-- <div class="footer-social">
+          <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
+          <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
+          <a href="#"><i class="ph-bold ph-github-logo"></i></a>
+          <a href="#"><i class="ph-bold ph-twitter-logo"></i></a>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
